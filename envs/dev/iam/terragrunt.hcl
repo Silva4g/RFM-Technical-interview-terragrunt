@@ -1,9 +1,9 @@
 terraform {
-  source = "git::https://github.com/Silva4g/RFM-Technical-interview-terraform.git//terraform/modules/eks?ref=v1"
+  source = "git::https://github.com/Silva4g/RFM-Technical-interview-terraform.git//iam?ref=v1"
 }
 
-include {
-  path = find_in_parent_folders()
+include "root" {
+  path = find_in_parent_folders("root.hcl")
 }
 
 inputs = {
